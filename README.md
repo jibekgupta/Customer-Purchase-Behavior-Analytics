@@ -20,6 +20,20 @@ Marketing and Growth Analytics teams responsible for customer engagement and rev
 
 ---
 
+## Key Metrics Defined
+The following metrics were used throughout the analysis to evaluate customer behavior and revenue performance:
+- **Total Revenue:** Sum of purchase amounts across all completed transactions. Used to identify high-impact customer segments and product categories.
+
+- **Average Order Value (AOV):** Total revenue divided by number of orders. Used to assess spending behavior across customer groups and purchasing channels.
+
+- **Purchase Frequency:** Number of orders per customer over the observed period. Used to distinguish between new, returning, and loyal customers.
+
+- **Discount Usage Rate:** Percentage of transactions that included a discount. Used to evaluate customer sensitivity to promotions and the effectiveness of discounting strategies.
+
+- **Subscription Rate:** Proportion of customers enrolled in a subscription program. Used to analyze the relationship between subscriptions, purchase frequency, and customer value.
+
+---
+
 ## Dataset Summary
 - 3,900 customer transactions  
 - 18 features including demographics, purchase details, discounts, reviews, shipping type, and subscription status  
