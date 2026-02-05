@@ -1,9 +1,22 @@
 # Customer Purchase Behavior Analysis
 
 ## Project Overview
-This project analyzes customer shopping behavior using transactional retail data to uncover insights related to spending patterns, customer segments, product performance, and subscription behavior. The goal is to support data-driven decisions in marketing, customer engagement, and product strategy.
+This project analyzes customer purchase behavior using transactional retail data to generate actionable insights that support customer targeting, pricing, and subscription strategy decisions. The analysis focuses on understanding revenue drivers, purchasing patterns, discount usage, and customer loyalty to help businesses optimize growth and retention efforts.
 
-The analysis combines Python for data preparation, SQL for structured querying, and Power BI for interactive visualization.
+---
+
+## Business Objective and Decision Question
+
+**Primary Business Objective**
+Identify high-value customer segments and purchasing drivers in order to inform targeted retention strategies, discount optimization, and subscription growth.
+
+**Primary Stakeholder**
+Marketing and Growth Analytics teams responsible for customer engagement and revenue optimization.
+
+**Key Decision Questions**
+1. Which customer segments contribute the most to overall revenue and average order value?
+2. Do discounts meaningfully increase customer spend, or do they primarily reduce margins?
+3. How does subscription status relate to purchasing frequency and customer value?
 
 ---
 
