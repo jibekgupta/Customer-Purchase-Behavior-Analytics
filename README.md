@@ -45,8 +45,9 @@ Data cleaning, feature engineering, SQL analytics, dashboarding, business storyt
 3. Optional: load the cleaned dataset into PostgreSQL and run `Customer Purchase Behavior.sql`.
 
 ## Dashboard Preview
-Add a screenshot at `images/dashboard.png` and link it here:
-`![Power BI Dashboard](images/dashboard.png)`
+![Power BI Dashboard](images/dashboard.png)
+
+Power BI dashboard summarizing category revenue, subscription adoption, and seasonality.
 
 ## SQL Highlights
 The SQL file includes:
