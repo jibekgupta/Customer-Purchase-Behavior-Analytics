@@ -1,124 +1,56 @@
 # Customer Purchase Behavior Analysis
 
-## Project Overview
-This project analyzes customer purchase behavior using transactional retail data to generate actionable insights that support customer targeting, pricing, and subscription strategy decisions. The analysis focuses on understanding revenue drivers, purchasing patterns, discount usage, and customer loyalty to help businesses optimize growth and retention efforts.
+## Executive Summary
+This project analyzes 3.9K retail transactions to identify revenue drivers, discount impact, and subscription opportunities. Using Python for data preparation, SQL for business queries, and Power BI for visualization, the analysis surfaces actionable customer insights for marketing and growth teams.
 
----
+## Business Question
+How can customer shopping data be analyzed to uncover behavioral trends, strengthen customer engagement, and optimize marketing and product strategies?
 
-## Business Objective and Decision Question
+## Dataset Overview
+- 3,900 transactions across 18 attributes (demographics, product, discounts, shipping, reviews).
+- Missing values in review ratings were imputed using category-level medians.
+- Average purchase amount: $59.76; average review rating: 3.75.
 
-**Primary Business Objective**</br>
-Identify high-value customer segments and purchasing drivers in order to inform targeted retention strategies, discount optimization, and subscription growth.
+## Approach
+- **Python:** cleaned data, standardized columns, engineered `age_group` and `purchase_frequency_days`.
+- **SQL:** answered stakeholder questions on revenue, discount impact, shipping, and loyalty.
+- **Power BI:** built a dashboard with category performance, subscription adoption, and seasonality.
 
-**Primary Stakeholder**</br>
-Marketing and Growth Analytics teams responsible for customer engagement and revenue optimization.
-
-**Key Decision Questions**
-1. Which customer segments contribute the most to overall revenue and average order value?
-2. Do discounts meaningfully increase customer spend, or do they primarily reduce margins?
-3. How does subscription status relate to purchasing frequency and customer value?
-
----
-
-## Key Metrics Defined
-The following metrics were used throughout the analysis to evaluate customer behavior and revenue performance:
-- **Total Revenue:**</br>
-Sum of purchase amounts across all completed transactions. Used to identify high-impact customer segments and product categories.
-
-- **Average Order Value (AOV):**</br>
-Total revenue divided by number of orders. Used to assess spending behavior across customer groups and purchasing channels.
-
-- **Purchase Frequency:**</br>
-Number of orders per customer over the observed period. Used to distinguish between new, returning, and loyal customers.
-
-- **Discount Usage Rate:**</br>
-Percentage of transactions that included a discount. Used to evaluate customer sensitivity to promotions and the effectiveness of discounting strategies.
-
-- **Subscription Rate:**</br>
-Proportion of customers enrolled in a subscription program. Used to analyze the relationship between subscriptions, purchase frequency, and customer value.
-
----
-
-## Data Cleaning & Preparation
-The dataset was cleaned and prepared to ensure consistency, accuracy, and analytical reliability prior to analysis. Key cleaning steps included:
-- Removed duplicate transaction records to avoid inflating revenue and order counts.
-- Standardized categorical variables such as product category and shipping type to ensure consistent grouping during analysis.
-- Handled missing values in discount-related fields by treating null values as no-discount transactions where appropriate.
-- Converted date fields into datetime format to enable time-based aggregation and customer-level analysis.
-- Verified numeric fields (price, quantity, discount) to ensure valid ranges and prevent calculation errors in downstream metrics.
-
-### Feature Engineering
-To support customer-level and business-focused analysis, additional features were engineered:
-
-- **Customer Purchase Frequency:**</br>
-Calculated as the total number of transactions per customer to support customer segmentation and loyalty analysis.
-
-- **Average Order Value (AOV):**</br>
-Derived at the customer level to compare spending behavior across different customer segments.
-
-- **Discount Indicator:**</br>
-Binary feature indicating whether a transaction included a discount, used to evaluate the impact of promotions on purchasing behavior.
-
-- **Age Group Bucketing:**</br>
-Customer ages were grouped into predefined ranges to simplify demographic analysis and identify spending patterns across age segments.
-
-- **Revenue per Transaction:**</br>
-Computed using price, quantity, and discount information to ensure consistent revenue calculations across analyses and dashboards.
-
----
-
-## Dataset Summary
-- 3,900 customer transactions  
-- 18 features including demographics, purchase details, discounts, reviews, shipping type, and subscription status  
-- Minor missing values in review ratings, handled during preprocessing  
-
----
-
-## Tools & Technologies
-- **Python:** Pandas, NumPy  
-- **SQL:** PostgreSQL  
-- **Visualization:** Power BI  
-- **Environment:** Jupyter Notebook  
-
----
-
-## Project Workflow
-
-### 1. Data Preparation (Python)
-- Cleaned and standardized raw transactional data  
-- Handled missing values and validated data consistency  
-- Engineered features such as age groups and purchase frequency  
-- Exported cleaned data to PostgreSQL for analysis  
-
-### 2. Data Analysis (SQL)
-- Analyzed revenue and average spend by customer demographics  
-- Identified high-spending customers and discount-driven products  
-- Segmented customers into New, Returning, and Loyal groups  
-- Compared purchasing behavior across shipping types and seasons  
-
-### 3. Visualization (Power BI)
-- Built an interactive dashboard summarizing key business metrics  
-- Visualized revenue and sales by category and season  
-- Analyzed subscription distribution and customer behavior  
-- Enabled dynamic filtering by demographics, category, and shipping type  
-
----
-
-## Key Insights
-- Clothing and Accessories generate the highest revenue  
-- Subscription adoption remains low, indicating growth opportunity  
-- Customers using faster shipping options tend to spend more  
-- Seasonal purchasing patterns are relatively consistent  
-- Strong repeat purchase behavior highlights customer loyalty  
-
----
+## Key Findings
+- Clothing and Accessories are the top revenue-driving categories.
+- Subscription adoption is low, indicating room for retention growth.
+- Faster shipping options correlate with higher average spend.
+- Seasonal purchasing trends are stable with modest spikes in Spring and Fall.
+- Repeat purchase behavior suggests a strong loyal segment.
 
 ## Business Recommendations
-- Strengthen subscription incentives to improve retention  
-- Introduce loyalty programs for repeat customers  
-- Optimize discount strategies to protect profit margins  
-- Focus marketing efforts on high-performing product categories  
-- Leverage demographic insights for targeted campaigns  
+- Strengthen subscription incentives to convert repeat customers.
+- Implement loyalty programs targeted at high-frequency buyers.
+- Optimize discounting for margin protection on discount-dependent items.
+- Prioritize marketing spend toward top-performing categories.
 
----
+## Skills Demonstrated
+Data cleaning, feature engineering, SQL analytics, dashboarding, business storytelling.
 
+## Repository Contents
+- **Notebook:** `Customer_Shopping_Behavior_Analysis.ipynb`
+- **SQL queries:** `Customer Purchase Behavior.sql`
+- **Dashboard:** `customer_behavior_dashboard.pbix`
+- **Dataset:** `customer_shopping_behavior.csv`
+- **Reports:** `Business Problem Overview.pdf`, `Customer Purchase Behavior Analytics.pdf`
+
+## Reproducibility
+1. Install dependencies: `pip install -r requirements.txt`.
+2. Open `Customer_Shopping_Behavior_Analysis.ipynb` and run top-to-bottom.
+3. Optional: load the cleaned dataset into PostgreSQL and run `Customer Purchase Behavior.sql`.
+
+## Dashboard Preview
+Add a screenshot at `images/dashboard.png` and link it here:
+`![Power BI Dashboard](images/dashboard.png)`
+
+## SQL Highlights
+The SQL file includes:
+- Revenue by gender
+- Discount sensitivity among high-value customers
+- Subscription impact on revenue
+- Top products by rating and discount dependency
