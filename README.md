@@ -7,10 +7,10 @@ This project analyzes customer purchase behavior using transactional retail data
 
 ## Business Objective and Decision Question
 
-**Primary Business Objective**
+**Primary Business Objective**</br>
 Identify high-value customer segments and purchasing drivers in order to inform targeted retention strategies, discount optimization, and subscription growth.
 
-**Primary Stakeholder**
+**Primary Stakeholder**</br>
 Marketing and Growth Analytics teams responsible for customer engagement and revenue optimization.
 
 **Key Decision Questions**
@@ -22,15 +22,48 @@ Marketing and Growth Analytics teams responsible for customer engagement and rev
 
 ## Key Metrics Defined
 The following metrics were used throughout the analysis to evaluate customer behavior and revenue performance:
-- **Total Revenue:** Sum of purchase amounts across all completed transactions. Used to identify high-impact customer segments and product categories.
+- **Total Revenue:**</br>
+Sum of purchase amounts across all completed transactions. Used to identify high-impact customer segments and product categories.
 
-- **Average Order Value (AOV):** Total revenue divided by number of orders. Used to assess spending behavior across customer groups and purchasing channels.
+- **Average Order Value (AOV):**</br>
+Total revenue divided by number of orders. Used to assess spending behavior across customer groups and purchasing channels.
 
-- **Purchase Frequency:** Number of orders per customer over the observed period. Used to distinguish between new, returning, and loyal customers.
+- **Purchase Frequency:**</br>
+Number of orders per customer over the observed period. Used to distinguish between new, returning, and loyal customers.
 
-- **Discount Usage Rate:** Percentage of transactions that included a discount. Used to evaluate customer sensitivity to promotions and the effectiveness of discounting strategies.
+- **Discount Usage Rate:**</br>
+Percentage of transactions that included a discount. Used to evaluate customer sensitivity to promotions and the effectiveness of discounting strategies.
 
-- **Subscription Rate:** Proportion of customers enrolled in a subscription program. Used to analyze the relationship between subscriptions, purchase frequency, and customer value.
+- **Subscription Rate:**</br>
+Proportion of customers enrolled in a subscription program. Used to analyze the relationship between subscriptions, purchase frequency, and customer value.
+
+---
+
+## Data Cleaning & Preparation
+The dataset was cleaned and prepared to ensure consistency, accuracy, and analytical reliability prior to analysis. Key cleaning steps included:
+- Removed duplicate transaction records to avoid inflating revenue and order counts.
+- Standardized categorical variables such as product category and shipping type to ensure consistent grouping during analysis.
+- Handled missing values in discount-related fields by treating null values as no-discount transactions where appropriate.
+- Converted date fields into datetime format to enable time-based aggregation and customer-level analysis.
+- Verified numeric fields (price, quantity, discount) to ensure valid ranges and prevent calculation errors in downstream metrics.
+
+### Feature Engineering
+To support customer-level and business-focused analysis, additional features were engineered:
+
+- **Customer Purchase Frequency:**</br>
+Calculated as the total number of transactions per customer to support customer segmentation and loyalty analysis.
+
+- **Average Order Value (AOV):**</br>
+Derived at the customer level to compare spending behavior across different customer segments.
+
+- **Discount Indicator:**</br>
+Binary feature indicating whether a transaction included a discount, used to evaluate the impact of promotions on purchasing behavior.
+
+- **Age Group Bucketing:**</br>
+Customer ages were grouped into predefined ranges to simplify demographic analysis and identify spending patterns across age segments.
+
+- **Revenue per Transaction:**</br>
+Computed using price, quantity, and discount information to ensure consistent revenue calculations across analyses and dashboards.
 
 ---
 
