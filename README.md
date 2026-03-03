@@ -235,4 +235,3 @@ Open `customer_behavior_dashboard.pbix` in Power BI Desktop and refresh the data
 ---
 
 *Analysis by Jibek Gupta · [jibekgupta059@gmail.com](mailto:jibekgupta059@gmail.com)*
-
