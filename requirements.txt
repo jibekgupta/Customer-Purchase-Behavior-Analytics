@@ -1,5 +1,7 @@
-pandas
-numpy
-sqlalchemy
-psycopg2-binary
-notebook
+pandas==2.2.2
+numpy==1.26.4
+sqlalchemy==2.0.30
+psycopg2-binary==2.9.9
+notebook==7.2.0
+matplotlib
+seaborn
